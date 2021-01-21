@@ -1,6 +1,8 @@
+// Setting URLs for initial dataset and tectonic plates dataset
 var queryURLquakes = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson"
 var queryURLplates = "https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_plates.json"
 
+// Setting up colors for earthquake intensity
 var color0 = "limegreen";
 var color1 = "chartreuse";
 var color2 = "yellow";
@@ -102,8 +104,6 @@ function createMap(earthquakes, plates) {
     var legend = L.control({position: 'bottomright'});
 
     // Create a layer control
-    // Pass in our baseMaps and overlayMaps
-    // Add the layer control to the map
     L.control
         .layers(baseMaps, overlayMaps, {
             collapsed: false
